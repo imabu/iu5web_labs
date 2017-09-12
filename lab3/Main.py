@@ -1,5 +1,5 @@
 from vk_clients import GettingID
-
+import json
 
 a = GettingID('egordudyrev')
-a.execute()
+res = a.execute()
