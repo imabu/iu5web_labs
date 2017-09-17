@@ -1,5 +1,5 @@
 def transform_str(str):
-    return str[::-1]
+    return str[::2]
 
 str_1="hello, Jooohn"
 str_2="hodo, ik"

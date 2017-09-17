@@ -18,38 +18,15 @@ class GettingID(BaseClient):
     def _get_data(self, method, http_method):
         r = requests.get(self.generate_url(method), self.get_params())
         return self.response_handler(r)
-
-    def _diagram(self, friends_dict):
-        age_list = [0 for i in range(120)]
-        today = datetime.now()
-        for f in friends_dict:
-            bdate_str = f.get('bdate')
-            try:
-                bdate = datetime.strptime(bdate_str, '%d.%m.%Y')
-                days = (today-bdate).days
-                age = days // 365
-                age_list[age] += 1
-            except:
-                pass
-        for i in range(120):
-            if (age_list[i]>0):
-                print(i,': ','#'*age_list[i])        
     
     def response_handler(self, response):
         res_dic = response.json()
-        if (res_dic.get('error')!=None):
+        if res_dic.get('error') not is None:
             err = res_dic.get('error')
             err_msg = err.get('error_msg')
             raise API_Exception(err_msg)            
-        else:
-            res_list = res_dic.get('response')
-            user_dict = res_list[0]
-            user_id = user_dict.get('id')
-            print(user_dict.get('last_name'), user_dict.get('first_name'), sep=' ')
-            get_friends = GettingFriends(user_id)
-            friends_dict = get_friends.execute();
-            self._diagram(friends_dict)
-            return response
+        else:            
+            return res_dic.get('response')[0]
 
 
 class GettingFriends(BaseClient):
@@ -67,9 +44,10 @@ class GettingFriends(BaseClient):
     def _get_data(self, method, http_method):
         r = requests.get(self.generate_url(method), self.get_params())        
         return self.response_handler(r)
+    
     def response_handler(self, response):
         res_dic = response.json()
-        if (res_dic.get('error')!=None):
+        if res_dic.get('error') not is None:
             err = res_dic.get('error')
             err_msg = err.get('error_msg')
             raise API_Exception(err_msg)            
