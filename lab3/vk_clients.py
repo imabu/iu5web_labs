@@ -21,7 +21,7 @@ class GettingID(BaseClient):
     
     def response_handler(self, response):
         res_dic = response.json()
-        if res_dic.get('error') not is None:
+        if not res_dic.get('error')  is None:
             err = res_dic.get('error')
             err_msg = err.get('error_msg')
             raise API_Exception(err_msg)            
@@ -47,7 +47,7 @@ class GettingFriends(BaseClient):
     
     def response_handler(self, response):
         res_dic = response.json()
-        if res_dic.get('error') not is None:
+        if not res_dic.get('error')  is None:
             err = res_dic.get('error')
             err_msg = err.get('error_msg')
             raise API_Exception(err_msg)            
