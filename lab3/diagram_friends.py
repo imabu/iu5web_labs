@@ -5,7 +5,7 @@ user = get_user.execute()
 user_id = user.get('id')
 
 get_friends = GettingFriends(user_id)
-friends = get_friends.execute();
+friends = get_friends.execute()
 
 age_list = [0 for i in range(120)]
 today = datetime.now()

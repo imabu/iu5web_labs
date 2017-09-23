@@ -7,7 +7,9 @@ from datetime import datetime
 #   sleep(5.5)
 #
 # После завершения блока должно вывестись в консоль примерно 5.5
-class timer():    
+
+
+class timer():
     def __enter__(self):
         self.start = datetime.today()
 

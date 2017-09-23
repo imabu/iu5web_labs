@@ -5,22 +5,20 @@ import random
 def field(items, *args):
     assert len(args) > 0
 
-    result = []
-
-    if(len(args)==1):
+    if len(args) == 1:
         for it in items:
             for key in args:
                 elem = it.get(key)                
-                if(elem != None):
+                if elem is not None:
                     yield elem
     else:                
         for it in items:
             res_dict = {}
             for key in args:
                 elem = it.get(key)
-                if(elem != None):
+                if elem is not None:
                     res_dict[key] = elem
-            if (len(res_dict)>0):
+            if len(res_dict)>0:
                 yield res_dict     
 
 

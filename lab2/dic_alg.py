@@ -5,34 +5,34 @@ def filter_emp(dic_empls):
                 if (child["age"]>=18):
                     print(emp["name"])
                     break
-ivan={
-    "name":"ivan",
-    "age":46, 
-    "children":[
-        {"name":"karen",
-         "age":12},
-        {"name":"lip",
-         "age":20}
+ivan = {
+    "name": "ivan",
+    "age": 46,
+    "children": [
+        {"name": "karen",
+         "age": 12},
+        {"name": "lip",
+         "age": 20}
         ]
     }
-rose={
-    "name":"rose",
-    "age":46, 
-    "children":[
-        {"name":"rory",
-         "age":12},
-        {"name":"emmy",
-         "age":1}
+rose = {
+    "name": "rose",
+    "age": 46,
+    "children": [
+        {"name": "rory",
+         "age": 12},
+        {"name": "emmy",
+         "age": 1}
         ]
     }
-jody={
-    "name":"jody",
-    "age":46, 
-    "children":[
-        {"name":"debby",
-         "age":23},
-        {"name":"karl",
-         "age":1}
+jody = {
+    "name": "jody",
+    "age": 46,
+    "children": [
+        {"name": "debby",
+         "age": 23},
+        {"name": "karl",
+         "age": 1}
         ]
     }
 
