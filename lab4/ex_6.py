@@ -7,11 +7,11 @@ from librip.gens import field, gen_random
 from librip.iterators import Unique as unique
 import re
 
-#path = r"K:\#1\inf\iu5web_labs\lab4\data_light_cp1251.json"
+path = r"K:\#1\inf\iu5web_labs\lab4\data_light_cp1251.json"
 
 # Здесь необходимо в переменную path получить
 # путь до файла, который был передан при запуске
-path = sys.argv[1]
+#path = sys.argv[1]
 
 with open(path) as f:
     data = json.load(f)

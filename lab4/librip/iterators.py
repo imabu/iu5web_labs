@@ -22,7 +22,7 @@ class Unique(object):
                     self._s.add(i.lower())
                     return i
                 elif (not self.ig_case) and (i not in self._s):
-                    self._s.add(i.lower())
+                    self._s.add(i)
                     return i                     
         else: raise StopIteration()        
 
