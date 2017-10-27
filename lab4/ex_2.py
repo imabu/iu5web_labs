@@ -12,5 +12,5 @@ un3 = Unique(data3, ingnore_case=True)
 un4 = Unique(data3)
 
 print('list:', ' '.join(map(str,un)),'generator:', ' '.join(map(str, un2)), sep='\n')
-print(' '.join(map(str,un3)))
-print(' '.join(map(str,un4)))
+print(' '.join(map(str, un3)))
+print(' '.join(map(str, un4)))

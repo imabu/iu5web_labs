@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from librip.gens import *
+
 goods = [
     {'title': 'Ковер', 'price': 2000, 'color': 'green'},
     {'title': 'Диван для отдыха', 'price': 5300, 'color': 'black'},
