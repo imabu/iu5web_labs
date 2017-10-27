@@ -26,4 +26,4 @@ def test_4():
 test_1()
 test_2()
 test_3()
-t4 = test_4()
+test_4()
